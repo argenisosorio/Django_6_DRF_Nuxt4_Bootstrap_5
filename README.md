@@ -1,4 +1,4 @@
-<h1>Django 6 + Django REST Framework + Nuxt 4 + Bootstrap 5</h1>h1>
+<h1>Django 6 + Django REST Framework + Nuxt 4 + Bootstrap 5</h1>
 
 Example project showcasing API consumption from Django 6 + Django REST Framework
 using Nuxt 4 + Bootstrap 5. Built as a reference implementation for developers
