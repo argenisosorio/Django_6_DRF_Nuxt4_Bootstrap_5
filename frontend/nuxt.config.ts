@@ -3,6 +3,14 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
 
+
+  runtimeConfig: {
+    // Las variables dentro de 'public' son accesibles desde el navegador
+    public: {
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://127.0.0.1:8000/api'
+    }
+  },
+
   // Configuración de etiquetas Meta Globales
   app: {
     head: {

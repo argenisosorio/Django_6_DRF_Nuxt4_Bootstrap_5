@@ -34,6 +34,10 @@
 </template>
 
 <script setup>
+// Inicializa el acceso a la variable de entorno para la URL base del backend.
+const config = useRuntimeConfig()
+// Ahora 'apiBase' contiene la URL base de la API configurada en el .env
+const apiBase = config.public.apiBase
 // Llamamos al estado global del loader para mostrar el spinner durante la petición
 const loader = useState('loader')
 // Capturamos el ID de la persona desde la URL
@@ -55,7 +59,7 @@ const form = ref({
 
 // Obtenemos los datos de la persona al cargar la página
 // Usamos useFetch para traer los datos apenas carga la página
-const { data: person, pending: pendingFetch } = await useFetch(`http://127.0.0.1:8000/api/person/${personId}/`, {
+const { data: person, pending: pendingFetch } = await useFetch(`${apiBase}/person/${personId}/`, {
   key: `user-${personId}`
 })
 
@@ -72,7 +76,7 @@ watch(person, (newVal) => {
 const updatePerson = async () => {
   loader.value = true
   try {
-    await $fetch(`http://127.0.0.1:8000/api/person/${personId}/`, {
+    await $fetch(`${apiBase}/person/${personId}/`, {
       method: 'PUT', // PUT reemplaza todo el objeto
       body: form.value
     })

@@ -45,6 +45,11 @@
 </template>
 
 <script setup>
+// Inicializa el acceso a la variable de entorno para la URL base del backend.
+const config = useRuntimeConfig()
+// Ahora 'apiBase' contiene la URL base de la API configurada en el .env
+const apiBase = config.public.apiBase
+
 // Llamamos al estado global del loader para mostrar el spinner durante la petición
 const loader = useState('loader')
 
@@ -67,7 +72,7 @@ const savePerson = async () => {
   // Validación simple para asegurarnos de que los campos no estén vacíos
   try {
     // Usamos $fetch para peticiones manuales (POST, PUT, DELETE)
-    await $fetch('http://127.0.0.1:8000/api/person/', {
+    await $fetch(`${apiBase}/person/`, {
       method: 'POST',
       body: form.value
     })
