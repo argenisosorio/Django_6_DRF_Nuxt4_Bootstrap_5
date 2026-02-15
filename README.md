@@ -9,8 +9,8 @@ building full-stack JavaScript/Python applications with decoupled architecture.
 ```
 Python >= 3.12
 Django == 6.0.2
-Django REST Framework
-django-cors-headers
+Django REST Framework == 3.16.1
+django-cors-headers == 4.9.0
 Node.js >= v20.20.0
 npm
 ```
