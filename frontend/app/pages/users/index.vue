@@ -1,6 +1,10 @@
 <template>
   <div>
-    <GoBack />
+    <GoBack /> |
+    <NuxtLink to="/users/create">
+      <button>Create person</button>
+    </NuxtLink>
+
     <h1>Users List</h1>
 
     <div v-if="error" class="alert alert-danger">
