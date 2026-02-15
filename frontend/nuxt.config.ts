@@ -1,0 +1,35 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: '2025-07-15',
+  devtools: { enabled: false },
+
+  // Configuración de etiquetas Meta Globales
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'es' // Define el idioma del sitio
+      },
+      title: 'My Nuxt app', // Título por defecto
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', content: 'Nuxt 4 examples' },
+        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'author', content: 'Ing. Argenis Osorio' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
+  },
+
+  css: [
+    'assets/css/main.css'
+  ],
+
+  modules: ['@nuxt/eslint'],
+
+  eslint: {
+    checker: true
+  }
+})
