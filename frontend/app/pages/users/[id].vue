@@ -11,6 +11,9 @@
       <h1>Profile from: {{ user.name }}</h1>
       <div >
         <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Age:</strong> {{ user.age }}</p>
+        <p><strong>Created at:</strong> {{ new Date(user.created_at).toLocaleString() }}</p>
+        <p><strong>Updated at:</strong> {{ new Date(user.updated_at).toLocaleString() }}</p>
       </div>
     </div>
   </div>

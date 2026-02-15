@@ -11,12 +11,27 @@
       Error al cargar usuarios. Inténtalo de nuevo.
     </div>
 
-    <ul v-else>
-      <li v-for="user in users_list" :key="user.id">
-        {{ user.name }} 
-        <NuxtLink :to="`/users/${user.id}`">Detail</NuxtLink>
-      </li>
-    </ul>
+    <table v-else>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="user in users_list" :key="user.id">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.age }}</td>
+          <td>
+            <NuxtLink :to="`/users/${user.id}`">Detail</NuxtLink> |
+            <NuxtLink :to="`/users/update/${user.id}`">Update</NuxtLink>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -43,3 +58,24 @@ watch(pending, (newVal) => {
   loader.value = newVal
 }, { immediate: true }) // immediate asegura que si empieza cargando, el loader se active de una vez
 </script>
+
+
+<style scoped>
+table {
+  width: 100%;
+  border-collapse: collapse; /* Crucial para que las líneas se unan */
+}
+
+table, th, td {
+  border: 1px solid black; /* Define el grosor, estilo y color de la rejilla */
+}
+
+th, td {
+  padding: 8px; /* Espaciado interno para que el texto no toque las líneas */
+  text-align: left; /* Alineación del texto */
+}
+
+th {
+  background-color: #f2f2f2; /* Color de fondo opcional para el encabezado */
+}
+</style>

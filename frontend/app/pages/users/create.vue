@@ -73,7 +73,6 @@ const savePerson = async () => {
     })
 
     // Si todo sale bien, redirigimos a la lista
-    alert('Person saved successfully!')
     navigateTo('/users')
 
   } catch (err) {
