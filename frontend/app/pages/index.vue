@@ -1,20 +1,26 @@
 <template>
   <div>
-    <h1>Welcome page</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h1>
+      <img
+        src="/images/star.png"
+        alt="star"
+        class="img-fluid mb-3"
+        width="50px"
+      >
+      Django 6 + Django REST Framework + Nuxt 4 + Bootstrap 5
+    </h1>
+    <p>
+      Example project showcasing API consumption from Django 6 + Django REST
+      Framework using Nuxt 4 + Bootstrap 5. Built as a reference implementation
+      for developers building full-stack JavaScript/Python applications with
+      decoupled architecture.
+    </p>
 
-    <img
-      src="/images/star.png"
-      alt="star"
-      class="img-fluid mb-3"
-      width="50px"
-    >
     <br>
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Launch demo modal
+      Test Bootstrap Modal
     </button>
 
     <!-- Modal -->
@@ -26,7 +32,9 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"/>
           </div>
           <div class="modal-body">
-            ...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

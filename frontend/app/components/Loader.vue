@@ -25,7 +25,7 @@
   width: 60px;
   height: 60px;
   border: 6px solid rgba(255, 255, 255, 0.1); /* Círculo de fondo tenue */
-  border-left-color: #7d47ff; /* El color morado que pediste */
+  border-left-color: #0011ff; /* El color morado que pediste */
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

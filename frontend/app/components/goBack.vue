@@ -15,7 +15,4 @@ const goBack = () => {
 </template>
 
 <style scoped>
-.btn-back {
-  background-color: #f3f4f6;
-}
 </style>

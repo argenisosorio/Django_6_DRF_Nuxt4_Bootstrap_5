@@ -12,14 +12,4 @@
 </template>
 
 <style scoped>
-a {
-  color: red;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.router-link-active {
-  color: #00dc82 !important;
-  text-decoration: underline;
-}
 </style>
