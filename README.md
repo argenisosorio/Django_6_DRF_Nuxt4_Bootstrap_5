@@ -75,6 +75,12 @@ Install Node.js dependencies
 $ npm install
 ```
 
+Create your local settings file
+
+```
+$ cp .env_example .env
+```
+
 Start the Nuxt development server
 
 ```
